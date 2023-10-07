@@ -35,6 +35,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="card">
+                       
                         <div class="card-body">
                             <div class="d-flex flex-column align-items-center text-center">
                                 <img src=" {{ (!empty($profileData->photo)) ? url('upload/admin_images/'.$profileData->photo) : url('upload/no_image.jpg')  }}" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
@@ -63,6 +64,8 @@
                 </div>
                 <div class="col-lg-8">
                     <div class="card">
+                        <form action="{{ route('admin.profile.store') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
                         <div class="card-body">
                             <div class="row mb-3">
                                 <div class="col-sm-3">
@@ -119,10 +122,11 @@
                             <div class="row">
                                 <div class="col-sm-3"></div>
                                 <div class="col-sm-9 text-secondary">
-                                    <input type="button" class="btn btn-primary px-4" value="Save Changes" />
+                                    <input type="submit" class="btn btn-primary px-4" value="Save Changes" />
                                 </div>
                             </div>
                         </div>
+                    </form>
                     </div>
                    
                 </div>
