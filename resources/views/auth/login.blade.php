@@ -51,10 +51,10 @@
 
                                 <div class="col-lg-6 col-sm-6 form-condition">
                                     <div class="agree-label">
-                                        <input type="checkbox" id="chb1">
+                                        {{-- <input type="checkbox" id="chb1">
                                         <label for="chb1">
                                             Remember Me
-                                        </label>
+                                        </label> --}}
                                     </div>
                                 </div>
     

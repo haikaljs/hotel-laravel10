@@ -356,7 +356,7 @@
 
     // Preloader JS
     jQuery(window).on("load", function () {
-        jQuery(".preloader").fadeOut(50);
+        jQuery(".preloader").fadeOut(5);
     });
 
     // Switch Btn
