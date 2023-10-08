@@ -33,7 +33,7 @@
                             <div class="row">
                                 <div class="col-lg-12 ">
                                     <div class="form-group">
-                                        <input type="text" name="login" id="login" class="form-control @error('login') is-invalid @enderror"  data-error="Please enter your Userlogin or Email" placeholder="Email/Name/Phone">
+                                        <input type="text" name="login" id="login" class="form-control @error('login') is-invalid @enderror"  data-error="Please enter your Userlogin or Email" placeholder="Email / Name / Phone">
                                         @error('login')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
