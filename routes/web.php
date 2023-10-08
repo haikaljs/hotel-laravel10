@@ -46,3 +46,13 @@ Route::middleware(['auth', 'roles:admin'])->group(function(){
 
 Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
 
+// Admin group middleware
+Route::middleware(['auth', 'roles:admin'])->group(function(){
+    // Team all route
+    Route::controller(TeamController::class)->group(function(){
+        Route::get('/all/team', 'AllTeam')->name('all.team');
+    });
+});
+
+
+
