@@ -25,7 +25,9 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [UserController::class, 'UserProfile'])->name('user.profile');
     Route::post('/profile/store', [UserController::class, 'UserProfileStore'])->name('profile.store');
+    Route::get('/user/change/password', [UserController::class, 'UserChangePassword'])->name('user.change.password');
     Route::get('/logout', [UserController::class, 'UserLogout'])->name('user.logout');
+    Route::post('/password/change/store', [UserController::class, 'PasswordChangeStore'])->name('password.change.store');
     
 });
 
