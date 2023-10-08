@@ -47,13 +47,19 @@ class UserController extends Controller
 
     public function UserLogout(Request $request)
     {
+        $username = Auth::user()->name;
         Auth::guard('web')->logout();
 
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
 
-        return redirect('/login');
+        $notification = [
+            'message' => "User $username logout successfully",
+            'alert-type' => 'success'
+        ];
+
+        return redirect('/login')->with($notification);
     }
 
     public function UserChangePassword(){
