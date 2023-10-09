@@ -32,6 +32,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10" defer></script>
 	<script src="{{ asset('backend/assets/js/code.js') }}" defer></script>
 
+	{{-- validatejs --}}
+	<script src="{{ asset('backend/assets/js/validate.min.js') }}" defer></script>
+
 	{{-- toaster css--}}
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 
