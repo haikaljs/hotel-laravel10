@@ -6,7 +6,7 @@
         
        
         <div class="ms-auto">
-            <button type="button" class="btn btn-outline-primary px-5 radius-30">Add Team</button>
+            <a href="{{ route('add.team') }}" class="btn btn-outline-primary px-5 radius-30">Add Team</a>
         </div>
     </div>
     <!--end breadcrumb-->
