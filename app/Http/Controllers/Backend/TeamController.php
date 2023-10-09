@@ -86,4 +86,19 @@ class TeamController extends Controller
             return redirect()->route('all.team')->with($notification);
         }
     }
+
+    public function DeleteTeam($id){
+        $item = Team::findOrFail($id);
+        $img = $item->image;
+        unlink($img);
+
+        Team::findOrFail($id)->delete();
+
+        $notification = [
+            'message' => 'Team deleted successfully',
+            'alert-type' => 'success'
+        ];
+
+        return redirect()->back()->with($notification);
+    }
 }
