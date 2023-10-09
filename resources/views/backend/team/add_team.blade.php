@@ -27,7 +27,7 @@
               
                 <div class="col-lg-8">
                     <div class="card">
-                        <form action="{{ route('admin.profile.store') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('team.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                         <div class="card-body">
                             <div class="row mb-3">
@@ -43,7 +43,7 @@
                                     <h6 class="mb-0">Positon</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                    <input type="email" name="position" class="form-control"  />
+                                    <input type="text" name="position" class="form-control"  />
                                 </div>
                             </div>
                             <div class="row mb-3">

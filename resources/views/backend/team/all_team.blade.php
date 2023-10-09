@@ -3,14 +3,23 @@
 <div class="page-content">
     <!--breadcrumb-->
     <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-        
+        <div class="breadcrumb-title pe-3">Manage Teams</div>
+        <div class="ps-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0 p-0">
+                    <li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">All Teams</li>
+                </ol>
+            </nav>
+        </div>
        
         <div class="ms-auto">
             <a href="{{ route('add.team') }}" class="btn btn-outline-primary px-5 radius-30">Add Team</a>
         </div>
     </div>
     <!--end breadcrumb-->
-    <h6 class="mb-0 text-uppercase">All Team</h6>
+    
     <hr/>
     <div class="card">
         <div class="card-body">
@@ -30,13 +39,13 @@
                         @foreach ($team as $key => $item)
                         <tr>
                             <td>{{ $key + 1 }}</td>
-                            <td><img src="{{ asset($item->image) }}" alt="" width="70px; height:40px;"></td>
+                            <td><img src="{{ asset($item->image) }}" alt="" width="90px;" height="60px;"></td>
                             <td>{{ $item->name }}</td>
                             <td>{{ $item->position }}</td>
                             <td>{{ $item->facebook }}</td>
                             <td>
-                                <a href="#" class="btn btn-success">Edit</a>
-                                <a href="#" class="btn btn-primary">Delete</a>
+                                <a href="#" class="btn btn-warning">Edit</a>
+                                <a href="#" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                         @endforeach
