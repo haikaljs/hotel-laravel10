@@ -54,6 +54,8 @@ Route::middleware(['auth', 'roles:admin'])->group(function(){
         Route::get('/all/team', 'AllTeam')->name('all.team');
         Route::get('/add/team', 'AddTeam')->name('add.team');
         Route::post('/team/store', 'TeamStore')->name('team.store');
+        Route::get('/team/edit/{id}', 'EditTeam')->name('team.edit');
+        Route::post('/team/update', 'UpdateTeam')->name('team.update');
     });
 });
 
