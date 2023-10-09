@@ -40,7 +40,7 @@
                 <div class="menu-title">Manage Book Area</div>
             </a>
             <ul>
-                <li> <a href="{{ route('all.team') }}"><i class='bx bx-radio-circle'></i>Update Book Area</a>
+                <li> <a href="{{ route('book.area') }}"><i class='bx bx-radio-circle'></i>Update Book Area</a>
                 </li>
                
                

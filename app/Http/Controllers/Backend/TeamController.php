@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Models\Team;
+use App\Models\BookArea;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use App\Http\Controllers\Controller;
@@ -105,7 +106,8 @@ class TeamController extends Controller
     // ============= Book Area All Methods ==============
 
     public function BookArea(){
-        
+        $book = BookArea::find(1);
+        return view('backend.bookarea.book_area', compact('book'));
     }
 
 }
