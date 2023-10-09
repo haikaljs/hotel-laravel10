@@ -49,6 +49,8 @@ Route::get('/admin/login', [AdminController::class, 'AdminLogin'])->name('admin.
 
 // Admin group middleware
 Route::middleware(['auth', 'roles:admin'])->group(function(){
+
+
     // Team all route
     Route::controller(TeamController::class)->group(function(){
         Route::get('/all/team', 'AllTeam')->name('all.team');
@@ -57,6 +59,14 @@ Route::middleware(['auth', 'roles:admin'])->group(function(){
         Route::get('/team/edit/{id}', 'EditTeam')->name('team.edit');
         Route::post('/team/update', 'UpdateTeam')->name('team.update');
         Route::get('/delete/team/{id}', 'DeleteTeam')->name('delete.team');
+    });
+
+
+    //  Book Area
+      // Team all route
+      Route::controller(TeamController::class)->group(function(){
+        Route::get('/book/area', 'BookArea')->name('book.area');
+     
     });
 });
 
